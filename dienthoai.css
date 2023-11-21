@@ -1,0 +1,410 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
+  font-size: 13px;
+  font-weight: 400;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  min-width: 1200px;
+}
+.container {
+  min-width: 1200px;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/*slide*/
+#slider-container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  width: 1200px;
+  height: 200px;
+  margin-top: 20px;
+  position: relative;
+  white-space: nowrap;
+  border-radius: 10px; /* Đặt độ cong cho slide ở đây */
+  overflow: hidden; /* Để ẩn phần vượt ra khỏi đường cong */
+}
+
+#slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+  width: 500%; /* Đặt chiều rộng là 500% để chứa tất cả các slide */
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+i {
+  display: inline-block;
+}
+.button-container {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+.button-container button {
+  cursor: pointer;
+  background: #c2c2c273;
+  border-radius: 23px;
+  text-align: center;
+  padding: 14px 0 15px 0;
+  width: 46px;
+  border: none;
+}
+.button-container .button-left {
+  order: 1;
+  margin-left: 30px; /* Đặt margin để tạo khoảng trống giữa nút và slide */
+}
+.button-container .button-right {
+  order: 2;
+  margin-right: 30px; /* Đặt margin để tạo khoảng trống giữa nút và slide */
+}
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+.button-container .button-left:hover,
+.button-container .button-right:hover {
+  background: #e6e4e473;
+}
+
+/**/
+.breadcrumb {
+	list-style: none;
+	padding: 0;
+	margin: 20px 0 0 0;
+	display: flex;
+	color: #111;
+}
+.breadcrumb li {
+	margin-right: 6px;
+	display: flex;
+	vertical-align: middle;
+	align-items: center;
+	justify-content: center;
+}
+.breadcrumb li i {
+	margin-right: 2px;
+	font-size: 11px;
+}
+.breadcrumb li:last-child:after {
+	content: '';
+}
+.breadcrumb li a,
+.breadcrumb li a:link,
+.breadcrumb li a:visited {
+	color: #111;
+	font-weight: bold;
+}
+.breadcrumb li a:hover {
+	color: #009a82;
+}
+.breadcrumb li a.actived {
+	color: #009981;
+}
+.breadcrumb span{
+  margin-left: 7px;
+}
+
+/**/
+.product-filters2 {
+	background: #fff 0% 0% no-repeat padding-box;
+	box-shadow: 0 3px 6px #00000029;
+	border-radius: 14px;
+	margin: 20px 0;
+}
+.product-filters2 {
+	position: relative;
+	display: flex;
+}
+.product-filters2 .left,
+.product-filters2 .right {
+	display: flex;
+	justify-items: right;
+	justify-content: right;
+	width: 100px;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+.product-filters2 .left {
+	flex-basis: auto;
+	flex-shrink: 1;
+	flex-grow: 2;
+}
+.product-filters2 strong.label {
+	display: inline-block;
+	color: #00917a;
+	padding: 15px 20px;
+}
+.product-filters2 .facet {
+	display: block;
+	padding: 15px 10px;
+	margin-right: 20px;
+}
+.product-filters2 .facet .sub {
+	display: none;
+	position: absolute;
+	width: 100%;
+	z-index: 123;
+	left: 0;
+	top: 40px;
+	padding-top: 10px;
+}
+.product-filters2 .facet:hover .sub {
+	display: block;
+}
+.product-filters2 .facet:hover label a,
+.product-filters2 .facet:hover label span {
+	color: #fd475a;
+}
+.product-filters2 .facet .sub ul {
+	background: #fff;
+	box-shadow: 0 3px 6px #00000029;
+	border-radius: 14px;
+	margin: 0;
+	display: grid;
+	grid-template-columns: auto auto auto auto auto;
+	padding: 5px 10px;
+	grid-column-gap: 10px;
+  list-style: none;
+}
+.product-filters2 .facet .sub ul li {
+	list-style: none;
+	padding: 5px;
+
+}
+.product-filters2 .facet label {
+	display: flex;
+}
+.product-filters2 .facet label span,
+.product-filters2 .facet label strong {
+	display: block;
+	margin-right: 5px;
+}
+.product-filters2 .facet i.icon-rightar::before {
+	font-size: 8px;
+	transform: rotate(90deg);
+}
+.product-filters2 .facet i.icon-minutes {
+	font-size: 8px;
+	background: #fd475a;
+	line-height: 16px;
+	width: 16px;
+	height: 16px;
+	display: block;
+	border-radius: 20px;
+	text-align: center;
+	color: #fff;
+	margin-right: 5px;
+}
+.product-filters2 .facet ul li a {
+	display: flex;
+}
+.product-filters2 .facet ul li i.total {
+	color: #888;
+	margin-left: 4px;
+}
+/*san pham*/
+.lts-product {
+  display: flex;
+  flex-wrap: wrap; /* Sử dụng flex-wrap thay vì flex-flow để xử lý xuống dòng */
+  margin: 0 -10px; /* Để giảm khoảng cách giữa các sản phẩm */
+}
+
+.lts-product .item {
+  margin: 0 10px 10px 0;
+  width: calc(
+    1 / 5 * 100% - 10px
+  ); /* Đảm bảo rằng mỗi sản phẩm chiếm 1/5 tổng chiều rộng và loại bỏ margin */
+  background: #fff;
+  box-shadow: 0 4px 6px #00000029;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+}
+
+.lts-product .item .img {
+  width: 170px;
+  margin: 40px auto 0 auto;
+  height: 180px;
+}
+
+.lts-product .item .info {
+  margin-top: 5px;
+  padding: 0 10px 15px 10px;
+  margin-bottom: 50px;
+}
+
+.lts-product .item .img img {
+  width: 100%;
+
+  height: 100%;
+}
+
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #00483d;
+}
+
+.lts-product .item .info a.title,
+.lts-product .item .info a.title:link,
+.lts-product .item .info a.title:visited {
+  color: #000;
+  font-weight: bold;
+  display: block;
+  height: 32.5px;
+}
+
+.lts-product .item .info .price {
+  display: block;
+  clear: both;
+}
+
+.lts-product .item .info .price strong {
+  font-size: 16px;
+  color: #fd475a;
+}
+
+.lts-product .item .info .text-red {
+  color: #fd475a;
+}
+
+.lts-product .item .note {
+  margin: 0;
+  padding: 5px 10px;
+  position: absolute;
+  bottom: 10px;
+  text-align: left;
+}
+
+.lts-product .item .bag {
+  display: inline-block;
+  background: #f7941e 0% 0% no-repeat padding-box;
+  box-shadow: 0 4px 6px #00000029;
+  border-radius: 3px;
+  padding: 3px 5px;
+  color: #fff;
+  font-size: 11px;
+}
+.sticker-left {
+  left: 5px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.sticker {
+  position: absolute;
+  top: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-orange,
+.text-orange * {
+  color: #f7941e;
+}
+
+/*sp khac*/
+.more-product {
+  text-align: center;
+}
+.more-product a {
+  margin: 30px auto 20px auto;
+  padding: 6px 50px;
+  display: inline-block;
+  background: #fff 0% 0% no-repeat padding-box;
+  box-shadow: 0 4px 6px #00000029;
+  border: 1px solid #004b3f;
+  border-radius: 4px;
+  color: #004b3f;
+  font-weight: bold;
+}
+.more-product a:hover {
+  color: #fff;
+  background: #004b3f;
+}
+
+/*p*/
+.page-content p {
+  margin: 0in 0in 6pt;
+  text-align: justify;
+  line-height: 150%;
+  background-image: initial;
+  background-position: initial;
+  background-size: initial;
+  background-repeat: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+}
+.page-content span {
+  font-size: 12pt;
+  line-height: 150%;
+  font-family: Arial, sans-serif;
+}
+
+/**/
+section .corevalue {
+  display: flex;
+  padding: 10px 60px;
+  margin: 20px 0;
+}
+section .corevalue .item {
+  display: flex;
+}
+section .corevalue .item {
+  width: 25%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+section .corevalue .item .icon {
+  font-size: 60px;
+  margin-right: 10px;
+  background: linear-gradient(to right, #00917a, #00483d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+section .corevalue .item {
+  width: 25%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+section .corevalue .item .text {
+  text-align: left;
+  padding-bottom: 15px;
+}
+section .corevalue .item .text span {
+  display: block;
+  font-size: 13px;
+}
+section .corevalue .item .text strong {
+  display: block;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+}
